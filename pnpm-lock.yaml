@@ -97,6 +97,9 @@ importers:
       '@repo/typescript-config':
         specifier: workspace:*
         version: link:../../packages/typescript-config
+      '@types/bun':
+        specifier: ^1.4.4
+        version: 1.4.4
       '@types/chrome':
         specifier: 0.3.7
         version: 0.3.7

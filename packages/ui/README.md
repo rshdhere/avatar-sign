@@ -84,7 +84,8 @@ shared mock data and says "demo" on screen.
 A Chrome **side panel** (as in the design's "In the browser" board), not an in-page overlay. Same `SignPanel`.
 The content script on youtube.com only reports the main video's time/rate to the panel and applies speed
 changes; the panel reads the active tab's URL for the video ID and fetches the track only after **Start**, so
-opening a video never spends sponsor credits. Fonts are bundled with `@fontsource` (no network fonts).
+opening a video never spends sponsor credits. The avatar is the same `AvatarCanvas`, ticked from
+`src/media-clock.ts` (extrapolates the ~4 Hz reports to every frame). Fonts are bundled with `@fontsource` (no network fonts).
 Build and load-unpacked steps: [apps/extension/README.md](../../apps/extension/README.md). Owner: Poonam.
 
 ## Rules
@@ -97,5 +98,4 @@ Build and load-unpacked steps: [apps/extension/README.md](../../apps/extension/R
 
 ## Next
 
-- Mount `AvatarCanvas` in the extension side panel too (same component; it needs a per-frame clock from the content script).
 - Fill `packages/sign-assets/dictionary.json` from `knownSigns()` so the gloss module uses these signs (needs Durgesh: multi-word keys).

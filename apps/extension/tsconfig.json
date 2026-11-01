@@ -4,11 +4,21 @@
     "module": "Preserve",
     "moduleResolution": "bundler",
     "jsx": "react-jsx",
-    "types": ["chrome", "vite/client"],
+    "types": [
+      "chrome",
+      "vite/client",
+      "bun"
+    ],
     "noEmit": true,
     "declaration": false,
     "declarationMap": false
   },
-  "include": ["src", "vite.config.ts"],
-  "exclude": ["node_modules", "dist"]
+  "include": [
+    "src",
+    "vite.config.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
 }
