@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useCallback, useEffect, useState } from "react";
 import { AvatarCanvas } from "@repo/ui/avatar-canvas";
 import { captionAt } from "@repo/ui/caption";
@@ -7,6 +8,7 @@ import { SignPanel } from "@repo/ui/sign-panel";
 import { useSignTrack } from "@repo/ui/use-sign-track";
 import { usePolledTime } from "../../hooks/use-polled-time";
 import { demoApi } from "../../lib/api";
+import { heroVideo } from "./content";
 import { Play } from "./icons";
 import s from "./landing.module.css";
 
@@ -32,15 +34,19 @@ export function HeroDemo() {
 
   return (
     <div className={s.heroStage}>
-      <div className={s.heroVideo} aria-hidden="true">
-        <span className={s.badge}>
+      <div className={s.heroVideo}>
+        <span className={s.badge} aria-hidden="true">
           <span className={s.greenDot} />
           Connected automatically
         </span>
-        <span className={s.play}>
+        <Link href={`/watch?v=${heroVideo}`} className={s.play} aria-label="Play a real video with the signing avatar">
           <Play />
-        </span>
-        {caption.text ? <span className={s.subtitle}>{caption.text}</span> : null}
+        </Link>
+        {caption.text ? (
+          <span className={s.subtitle} aria-hidden="true">
+            {caption.text}
+          </span>
+        ) : null}
       </div>
       {/* A live demo for show: not interactive, hidden from assistive tech (the page text says the same). */}
       <div className={s.heroPanel} aria-hidden="true" inert>

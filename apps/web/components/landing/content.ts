@@ -2,6 +2,9 @@
 
 export const chips = ["Lectures", "News", "Tutorials", "Explainers"];
 
+/** The hero play button opens this real video on /watch: the stage demo video picked in docs/pitch (#21, #23). */
+export const heroVideo = "w1vhSSu8Nxw";
+
 export const stats = [
   { label: "Deaf people in signing communities, worldwide", value: "70M+" },
   { label: "Deaf people in India (Census 2011)", value: "~50 lakh" },
