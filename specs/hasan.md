@@ -171,6 +171,10 @@ not mean local work must be discarded. Do not duplicate already implemented clip
 
 - **Stretch: avatar choices (done):** all three painted avatars (Suki, Sara, Sasha) can be picked from the panel header on `/watch`, `/signs` and the extension; the choice is remembered per browser. The player takes an optional `avatar` option (default Sara), an addition to the PLAN §4.4 options that existing hosts can ignore.
 
+#### Progress notes (2026-11-01, branch `hasan/landing-hero-play`)
+
+- **Landing hero:** the play button was a decorative icon and did nothing. It now links to `/watch?v=w1vhSSu8Nxw`, the stage video chosen in #21/#23; the ID lives in `components/landing/content.ts`. `apps/web` now runs `bun test`, starting with a check that this ID is valid.
+
 ### Concrete player semantics
 
 - `tick(t)` samples media seconds; neither `setSpeed` nor mixer timeScale may

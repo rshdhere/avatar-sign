@@ -51,7 +51,7 @@ to a few files). Design tokens and shared layout live in `app/globals.css`; the 
 
 | Route    | What it does                                                                                                                                        | Owner |
 | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------- | ----- |
-| `/`      | Landing page from the design board. The hero is a live demo: the avatar signs the sample track on a loop, with the subtitle in sync | Ayush |
+| `/`      | Landing page from the design board. The hero is a live demo: the avatar signs the sample track on a loop, with the subtitle in sync. Its play button opens the stage video on `/watch` | Ayush |
 | `/watch` | `?v=` takes a link or an ID. YouTube IFrame API on the left, signing panel on the right, both on the video's clock; speed chip sets the video rate | Hasan |
 | `/signs` | Every sign the avatar knows (from the player) with search; unknown words are fingerspelled and fetch Exa "how to sign it" links on submit only | Hasan |
 
