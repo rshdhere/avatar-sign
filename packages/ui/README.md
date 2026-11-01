@@ -79,6 +79,14 @@ Put copy in data, hooks in `hooks/`, and anything the extension could reuse in `
 Run: `pnpm --filter @signstream/web dev`. Set `NEXT_PUBLIC_API_URL` to the API origin; without it the site uses the
 shared mock data and says "demo" on screen.
 
+## Extension (`apps/extension`)
+
+A Chrome **side panel** (as in the design's "In the browser" board), not an in-page overlay. Same `SignPanel`.
+The content script on youtube.com only reports the main video's time/rate to the panel and applies speed
+changes; the panel reads the active tab's URL for the video ID and fetches the track only after **Start**, so
+opening a video never spends sponsor credits. Fonts are bundled with `@fontsource` (no network fonts).
+Build and load-unpacked steps: [apps/extension/README.md](../../apps/extension/README.md). Owner: Poonam.
+
 ## Rules
 
 - Plain CSS, `ss-` prefix for anything in this package; no new UI library without a reason.
